@@ -1,0 +1,243 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Mukta', sans-serif;
+   
+
+}
+
+
+.body{
+    min-height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url("/DiktyoKentrika/Photos/banner.jpg");
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    
+}
+
+nav{
+    display: flex;
+    padding: 2% 6%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-links{
+    flex: 1;
+    text-align: right;
+}
+
+.nav-links ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+} 
+
+.nav-links ul li a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.nav-links ul li::after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    background  : #5d82b9;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+
+.nav-links ul li:hover::after{
+    width: 100%;
+}
+
+nav .fa{
+    display: none;
+}
+
+.text-box{
+    width: 100%;
+    text-align: center;
+}
+
+.text-box h1{
+    color: white;
+}
+
+
+
+
+
+
+
+
+
+
+.slider{
+    width: 800px;
+    height: 500px;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: auto;
+
+}
+  
+.slides{
+    width: 500%;
+    height: 500px;
+    display: flex;
+}
+  
+.slides input{
+    display: none;
+}
+  
+.slide{
+    width: 20%;
+    transition: 1.5s;
+}
+  
+.slide img{
+    width: 800px;
+    height: 500px;
+}
+  
+  /*css for manual slide navigation*/
+  
+.navigation-manual{
+    position: absolute;
+    width: 800px;
+    margin-top: -40px;
+    display: flex;
+    justify-content: center;
+}
+  
+.manual-btn{
+    border: 2px solid #5d82b9;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 1s;
+}
+  
+.manual-btn:not(:last-child){
+    margin-right: 40px;
+}
+  
+.manual-btn:hover{
+    background: #5d82b9;
+}
+  
+#radio1:checked ~ .first{
+    margin-left: 0;
+}
+  
+#radio2:checked ~ .first{
+    margin-left: -20%;
+}
+  
+#radio3:checked ~ .first{
+    margin-left: -40%;
+}
+  
+#radio4:checked ~ .first{
+    margin-left: -60%;
+}
+  
+  /*css for automatic navigation*/
+  
+.navigation-auto{
+    position: absolute;
+    display: flex;
+    width: 800px;
+    justify-content: center;
+    margin-top: 460px;
+}
+  
+.navigation-auto div{
+    border: 2px solid #5d82b9;
+    padding: 5px;
+    border-radius: 10px;
+    transition: 1s;
+}
+  
+.navigation-auto div:not(:last-child){
+    margin-right: 40px;
+}
+  
+#radio1:checked ~ .navigation-auto .auto-btn1{
+    background: #5d82b9;
+}
+  
+#radio2:checked ~ .navigation-auto .auto-btn2{
+    background: #5d82b9;
+}
+  
+#radio3:checked ~ .navigation-auto .auto-btn3{
+    background: #5d82b9;
+}
+  
+#radio4:checked ~ .navigation-auto .auto-btn4{
+    background: #5d82b9;
+}
+
+.container{
+    bottom: 80px;
+    max-width: 300px;
+    width: 100%;
+    background: transparent;
+    padding: 25px 30px;
+    margin: auto;
+    position: center;
+}
+
+.slidertext {
+    position: relative;
+    bottom: 20px;
+    margin-top: 100px;
+    margin: auto;
+}
+
+#slidertext{
+    font-size: 25px;
+    font-weight: 500;
+    color: #fff;
+}
+
+
+
+
+@media(max-width: 700px){
+    .text-box h1{
+        font-size: 20px;
+    }
+
+    .nav-links ul li{
+        display: block;
+    }
+
+    .nav-links{
+        position: absolute;
+        background: #5d82b9;
+        height: 100vh;
+        width: 200px;
+        top:0;
+        right: 0;
+        text-align: center;
+        z-index: 2;
+    }    
+
+    nav.fa{
+        display: block;
+        color: #fff;
+        margin: 10px;
+        font-size: 22px;
+        cursor: pointer;
+    }
+}

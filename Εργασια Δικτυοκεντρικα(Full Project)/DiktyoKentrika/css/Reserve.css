@@ -1,0 +1,116 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Mukta', sans-serif;
+}
+
+.header{
+    min-height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url("/DiktyoKentrika/photos/banner.jpg");
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+nav{
+    display: flex;
+    padding: 2% 6%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-links{
+    flex: 1;
+    text-align: right;
+}
+
+.nav-links ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+} 
+
+.nav-links ul li a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.nav-links ul li::after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    background  : #5d82b9;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+
+.nav-links ul li:hover::after{
+    width: 100%;
+}
+
+nav .fa{
+    display: none;
+}
+
+
+
+.content-table{
+    border-collapse: collapse;
+    margin: auto;
+    font-size: 0.9em;
+    min-width: 400px;
+    border-radius: 5px 5px 0 0;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    background-color: rgb(75, 75, 75);
+    width: 80%;
+    table-layout: fixed;
+    word-wrap: break-word;
+
+}
+
+.content-table thead tr{ 
+    width: 100%;
+    background-color: #5d82b9;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    font-size: 25px;
+}
+
+.content-table thead  {
+    position: sticky;
+    top: 0;
+}
+
+@media(max-width: 700px){
+    .text-box h1{
+        font-size: 20px;
+    }
+
+    .nav-links ul li{
+        display: block;
+    }
+
+    .nav-links{
+        position: absolute;
+        background: #5d82b9;
+        height: 100vh;
+        width: 200px;
+        top:0;
+        right: 0;
+        text-align: center;
+        z-index: 2;
+    }    
+
+    nav.fa{
+        display: block;
+        color: #fff;
+        margin: 10px;
+        font-size: 22px;
+        cursor: pointer;
+    }
+}
